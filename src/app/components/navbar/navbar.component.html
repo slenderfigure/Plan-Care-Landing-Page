@@ -1,0 +1,41 @@
+<header class="header">
+  <nav class="header__navbar">
+    <div class="header__wrapper wrapper">
+      <div class="col-left">
+        <a routerLink="/" class="header__logo">
+          <img [src]="logo"
+            class="icon" 
+            alt="Leaf Logo"
+            draggable="false">
+        </a>
+      </div>
+  
+      <div class="col-right">
+        <ul class="header__link-list">
+          <li *ngFor="let link of navLinks" 
+            class="header__list-item">
+            <a [routerLink]="[link.url]" class="header__link">
+              {{ link.text }}
+            </a>
+          </li>
+        </ul>
+    
+        <button type="button" 
+          class="header__search-btn">
+          <img src="assets/images/search.svg" 
+            class="icon"
+            alt="Search Icon"
+            draggable="false">
+        </button>
+    
+        <button type="button" 
+          class="header__profile-btn">
+          <img src="assets/images/user.svg" 
+            class="icon"
+            alt="User Icon"
+            draggable="false">
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>

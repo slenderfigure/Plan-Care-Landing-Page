@@ -1,0 +1,26 @@
+// Colors
+$green: #318162;
+$darkGreen: #132f3a;
+$yellow: #f9b75d;
+$lightGrey: #fef8f0;
+$white: #fff;
+$black: #000;
+
+// Font family
+$fontFamily: 'Nunito', sans-serif;
+
+// Font size
+$fontSizeLargest: 2.5rem;
+$fontSizeLarge: 1.5rem;
+$fontSizeNormal: 1rem;
+$fontSizeMedium: .9rem;
+$fontSizeSmall: .85rem;
+$fontSizeSmallest: .75rem;
+
+// Transition & Animation Easings
+$easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
+
+// Box shadows
+@mixin box-shadow($color: rgba($black, .2)) {
+  box-shadow: 0 .5rem 1rem rgba($color, .5);
+}
