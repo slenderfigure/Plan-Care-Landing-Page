@@ -1,31 +1,31 @@
-<main class="main-content">
+<section class="page-cover">
   <div class="wrapper">
     <div class="col-left">
-      <h1 class="main-content__title">
+      <h1 class="page-cover__title">
         {{ landingTitle }}
       </h1>
-      <p class="main-content__sub-title">
+      <p class="page-cover__sub-title">
         {{ landingSubTitle }}
       </p>
 
-      <div class="main-content__cta">
-        <a href="#" class="main-content__link button button-filled">
+      <div class="page-cover__cta">
+        <a href="#" class="page-cover__link button button-filled">
           Book now
         </a>
-        <a href="#" class="main-content__link button">
+        <a href="#" class="page-cover__link button">
           Know more
         </a>
       </div>
 
-      <p class="main-content__disclaimer">{{ disclaimer }}</p>
+      <p class="page-cover__disclaimer">{{ disclaimer }}</p>
     </div>
 
     <div class="col-right">
-      <figure class="main-content__hero">
+      <figure class="page-cover__hero">
         <img [src]="heroImage" 
           alt="Hero Image" 
           draggable="false"
-          class="main-content__hero-image">
+          class="page-cover__hero-image">
 
         <div *ngFor="let part of leafParts" 
           [attr.data-leaf-part-id]="part.id"
@@ -39,14 +39,14 @@
       </figure>
     </div>
 
-    <footer class="main-content__footer">
-      <ul class="main-content__sn-link-list">
+    <footer class="page-cover__footer">
+      <ul class="page-cover__sn-link-list">
         <li *ngFor="let link of footerLinks" 
-          class="main-content__sn-list-item">
+          class="page-cover__sn-list-item">
           <a [href]="link.url" 
             [attr.aria-label]="link.label"
             rel="noopener"
-            class="main-content__sn-link circle-button">
+            class="page-cover__sn-link circle-button">
             <img [src]="link.icon" 
               alt="Icon" 
               draggable="false"
@@ -55,7 +55,7 @@
         </li>
       </ul>
   
-      <div class="main-content__logo">
+      <div class="page-cover__logo">
         <div class="letter-wrapper">
           <span *ngFor="let letter of logoLetters; let i=index;" 
             [style]="topStyle(i, 255, 17.1)"
@@ -66,4 +66,4 @@
       </div>
     </footer>
   </div>
-</main>
+</section>

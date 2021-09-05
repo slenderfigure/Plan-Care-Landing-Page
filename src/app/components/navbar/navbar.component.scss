@@ -1,7 +1,9 @@
 @import '/src/sass/abstract/variables';
 
 .header {
+  position: relative;
   width: 100%;
+  z-index: 3;
 
   &__navbar {
     font-weight: 700;
@@ -12,6 +14,15 @@
     width: 100%;
     padding: 2rem 3rem;
     grid-template-columns: auto max-content;
+    transition: all .5s $easeOutExpo;
+
+    @media screen and (max-width: 650px) {
+      padding: 1.5rem 2.5rem;
+    }
+
+    @media screen and (max-width: 450px) {
+      padding: 1rem;
+    }
   }
 
   .col-right {
@@ -28,14 +39,21 @@
     display: block;
     width: 2.2rem;
     height: 2.2rem;
+    transition: all .5s $easeOutExpo;
     user-select: none;
+
+    @media screen and (max-width: 650px) {
+      transform: scale(.9);
+    }
+
+    @media screen and (max-width: 450px) {
+      transform: scale(.8);
+    }
   }
 
   &__link-list {
     display: flex;
     gap: 1.6rem;
-
-   
   }
 
   &__link {

@@ -9,6 +9,24 @@
   overflow: hidden;
 }
 
+.page-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.main {
+  transition: all .5s $easeOutExpo;
+  overflow: hidden;
+
+  // margin: 1.2rem;
+  border-radius: 1.5rem;
+
+  &[active-mobile-menu] {
+    margin: 1.2rem;
+    border-radius: 1.5rem;
+  }
+}
+
 .leaf-decor {
   position: absolute;
   z-index: 1;
@@ -100,9 +118,4 @@
       animation: growFromLeft 7s linear infinite alternate;
     }
   }
-}
-
-.content {
-  position: relative;
-  z-index: 2;
 }
