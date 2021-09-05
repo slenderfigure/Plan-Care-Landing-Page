@@ -1,0 +1,63 @@
+<main class="main-content">
+  <div class="wrapper">
+    <div class="col-left">
+      <h1 class="main-content__title">
+        {{ landingTitle }}
+      </h1>
+      <p class="main-content__sub-title">
+        {{ landingSubTitle }}
+      </p>
+
+      <div class="main-content__cta">
+        <a href="#" 
+          class="main-content__link button button-filled">
+          Book now
+        </a>
+        <a href="#" 
+          class="main-content__link button">
+          Know more
+        </a>
+      </div>
+
+      <p class="main-content__disclaimer">
+        {{ disclaimer }}
+      </p>
+    </div>
+
+    <div class="col-right">
+      <figure class="main-content__hero">
+        <img [src]="heroImage" 
+          alt="Hero Image" 
+          draggable="false"
+          class="main-content__hero-image">
+      </figure>
+    </div>
+
+    <footer class="main-content__footer">
+      <ul class="main-content__sn-link-list">
+        <li *ngFor="let link of footerLinks" 
+          class="main-content__sn-list-item">
+          <a [href]="link.url" 
+            [attr.aria-label]="link.label"
+            rel="noopener"
+            class="main-content__sn-link circle-button">
+            <img [src]="link.icon" 
+              alt="Icon" 
+              draggable="false"
+              class="icon">
+          </a>
+        </li>
+      </ul>
+  
+      <div class="main-content__logo">
+        <div class="letter-wrapper">
+          <span *ngFor="let letter of logoLetters; let i=index;" 
+            [style]="topStyle(i, 255, 17.1)"
+            class="letter">
+            {{ letter }}
+          </span>
+        </div>
+      </div>
+    </footer>
+  </div>
+</main>

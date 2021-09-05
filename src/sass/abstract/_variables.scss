@@ -5,17 +5,26 @@ $yellow: #f9b75d;
 $lightGrey: #fef8f0;
 $white: #fff;
 $black: #000;
+$royalBlue: #4169e1;
 
 // Font family
 $fontFamily: 'Nunito', sans-serif;
 
 // Font size
-$fontSizeLargest: 2.5rem;
+$fontSizeLargest: 3rem;
 $fontSizeLarge: 1.5rem;
 $fontSizeNormal: 1rem;
 $fontSizeMedium: .9rem;
 $fontSizeSmall: .85rem;
 $fontSizeSmallest: .75rem;
+
+// Line height
+$lineHeight: 1.2;
+$lineHeightWide: 2;
+
+// Drop shadows
+$dropshadow: -2rem -0.5rem 0.5rem;
+$dropshadowThick: -2rem 4rem 4rem;
 
 // Transition & Animation Easings
 $easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);

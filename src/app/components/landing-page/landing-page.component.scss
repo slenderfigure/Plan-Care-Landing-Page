@@ -1,1 +1,146 @@
-@import '/src/styles';
+@import '/src/sass/abstract/variables';
+@import '/src/sass/abstract/animations';
+
+.main-content {
+  min-height: calc(100vh - 15rem);
+  padding-top: 6rem;
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: inherit;
+    padding: 2rem 3rem;
+  }
+  
+  .col-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 26.93rem;
+  }
+  
+  .col-right {
+    position: relative;    
+  }
+
+  &__title {
+    font-size: $fontSizeLargest;
+    font-weight: bold;
+    line-height: $lineHeight;
+  }
+
+  &__sub-title {
+    font-size: $fontSizeNormal;
+    color: rgba($darkGreen, .8);
+    line-height: $lineHeightWide;
+  }
+
+  &__cta {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    gap: 1rem;
+  }
+
+  &__disclaimer {
+    color: $royalBlue;
+    font-size: $fontSizeSmallest;
+    font-weight: 600;
+  }
+
+  &__hero {
+    position: absolute;
+    top: -6rem;
+    width: 45rem;
+    height: 45rem;
+    transform: rotate(-15deg);
+    user-select: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+  }
+
+  &__hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: saturate(140%)
+            drop-shadow($dropshadowThick rgba($darkGreen, .4));
+  }
+
+  &__footer {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    padding: 3rem 0;
+  }
+
+  &__sn-link-list {
+    display: flex;
+    gap: .5rem;
+  }
+
+  &__sn-list-item {
+    flex-shrink: 0;
+  }
+
+  &__sn-link {
+    
+    .icon {
+      width: 1.2rem;
+      height: 1.2rem;
+      object-fit: contain;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    justify-self: center;
+    border-radius: 50%;
+    user-select: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1.8rem;
+      height: 1.8rem;
+      background: url('../../../assets/images/logo.svg') no-repeat;
+      background-size: contain;
+    }
+  
+    .letter-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 110px;
+      height: 110px;
+      border-radius: inherit;
+      animation: spin 25s linear infinite;
+    }
+  
+    .letter {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width: 1rem;
+      height: 55px;
+      font-size: .7rem;
+      font-weight: 800;
+      border-radius: 1rem;
+      // border: 1px solid rgba($darkGreen, .2);
+      transform-origin: bottom;
+    }
+  }
+}

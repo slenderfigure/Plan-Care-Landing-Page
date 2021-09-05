@@ -2,3 +2,57 @@
   max-width: 1200px;
   margin: auto;
 }
+
+.circle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;    
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  transition: all .5s $easeOutExpo;
+  
+  &:hover:not(.circle-button-filled) {
+    background-color: rgba($darkGreen, .1);
+  }
+
+  &-filled {
+    background-color: $green;
+
+    &:hover:not(:disabled) {
+      filter: brightness(80%);
+    }
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $darkGreen;
+  width: 8.75rem;
+  padding: 1.2rem 0;
+  font-weight: 800;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-radius: 4rem;
+  transition: all .5s $easeOutExpo;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover:not(.button-filled) {
+    background-color: rgba($darkGreen, .15);
+  }
+
+  &-filled {
+    color: $white;
+    font-weight: 700;
+    background-color: $green;
+    box-shadow: 0 2rem 3rem rgba($green, .6);
+
+    &:hover:not(:disabled) {
+      filter: brightness(80%);
+    }
+  }
+}
