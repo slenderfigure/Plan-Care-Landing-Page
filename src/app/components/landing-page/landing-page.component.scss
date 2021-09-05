@@ -153,6 +153,11 @@
     font-size: $fontSizeNormal;
     color: rgba($darkGreen, .8);
     line-height: $lineHeightWide;
+    transition: all .5s $easeOutExpo;
+
+    @media screen and (max-width: 450px) {
+      font-size: $fontSizeSmall;
+    }
   }
 
   &__cta {
