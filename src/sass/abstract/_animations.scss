@@ -2,3 +2,66 @@
   from { transform: rotate(0) }
   to { transform: rotate(360deg) }
 }
+
+@keyframes waveLeaf {
+  from {
+    transform: rotate(235deg) 
+               translateY(-4rem);
+    filter: blur(1px) 
+          brightness(80%)
+          drop-shadow($dropshadow rgba($darkGreen, .5));
+  }
+  to {
+    transform: rotate(280deg) 
+               translateY(-4rem)
+               scale(.8);
+    filter: blur(5px) 
+          brightness(80%)
+          drop-shadow($dropshadow rgba($darkGreen, .5));
+  }
+}
+
+@keyframes waveLeaf2 {
+  from {
+    transform: rotate(20deg) 
+               scaleX(-1)                
+               translateY(4.5rem);
+    filter: blur(1px) 
+          brightness(80%)
+          drop-shadow($dropshadow rgba($darkGreen, .5));
+  }
+  to {
+    transform: rotate(40deg) 
+               scaleX(-1) 
+               translateY(4.5rem);
+    filter: blur(5px) 
+          brightness(80%)
+          drop-shadow($dropshadow rgba($darkGreen, .5));
+  }
+}
+
+@keyframes grow {
+  to {
+    transform: scale(1.6);
+  }
+}
+
+@keyframes growFromLeft {
+  from {
+    transform: translateX(-50%) 
+               scale(.6);
+  }
+  to {
+    transform: translateX(0) scale(1.6);
+  }
+}
+
+@keyframes growFromRight {
+  from {
+    transform: translateX(50%) 
+               scale(.6);
+  }
+  to {
+    transform: translateX(0) scale(1.6);
+  }
+}
