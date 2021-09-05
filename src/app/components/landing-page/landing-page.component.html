@@ -9,19 +9,15 @@
       </p>
 
       <div class="main-content__cta">
-        <a href="#" 
-          class="main-content__link button button-filled">
+        <a href="#" class="main-content__link button button-filled">
           Book now
         </a>
-        <a href="#" 
-          class="main-content__link button">
+        <a href="#" class="main-content__link button">
           Know more
         </a>
       </div>
 
-      <p class="main-content__disclaimer">
-        {{ disclaimer }}
-      </p>
+      <p class="main-content__disclaimer">{{ disclaimer }}</p>
     </div>
 
     <div class="col-right">
@@ -31,15 +27,14 @@
           draggable="false"
           class="main-content__hero-image">
 
-        <!-- Bent dashed line effect -->
-        <div class="leaf-part-indicator">
-          <div class="label">Apex</div>
-          <div class="dot"></div>
-        </div>
-
-        <div class="leaf-part-indicator">
-          <div class="label">Veins</div>
-          <div class="dot"></div>
+        <div *ngFor="let part of leafParts" 
+          [attr.data-leaf-part-id]="part.id"
+          class="leaf-part-indicator">
+          <span class="label">{{ part.label }}</span>
+          <button type="button" 
+            role="Leaf Part Viewer"
+            aria-label="View Leaf Part"
+            class="dot"></button>
         </div>
       </figure>
     </div>

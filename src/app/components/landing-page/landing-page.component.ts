@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LeafPartIndicator, LEAF_PARTS } from './config/leaf-part-indicator.config';
 import { FOOTER_SN_LINKS, SocialNetworkLink } from './config/social-newtork-links.config';
 
 @Component({
@@ -12,13 +13,13 @@ export class LandingPageComponent implements OnInit {
   disclaimer: string = 'You will get a 30-days free trial!';
   heroImage: string = 'assets/images/leaf.png';
   footerLinks: SocialNetworkLink[] = FOOTER_SN_LINKS;
-
   logoLetters = [ 
     'S', 'C', 'R', 'O', 'L', 'L', '',
     'D', 'O', 'W', 'N', '',
     'F', 'O', 'R', '', 
     'M', 'O', 'R', 'E', ''
   ];
+  leafParts: LeafPartIndicator[] = LEAF_PARTS;
 
   topStyle(index: number, deg = 250, gap = 20): { [key:string]: string | number } {
     const rotate = deg + (index + 1) * gap;
