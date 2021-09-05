@@ -27,4 +27,10 @@ export class ContentWrapperComponent implements OnInit {
     if (!this.menuState || e.key !== 'Escape') return;
     this.menuService.openMenu(false);
   }
+
+  @HostListener('window:resize')
+  onResize(): void {
+    if (!this.menuState) return;
+    this.menuService.openMenu(false);
+  }
 }

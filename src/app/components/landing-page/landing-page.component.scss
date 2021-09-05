@@ -107,7 +107,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 0 3rem;
+    transition: all .5s $easeOutExpo;
     z-index: 1;
+
+    @media screen and (max-width: 650px) {
+      padding: 1.5rem 2.5rem;
+    }
+
+    @media screen and (max-width: 450px) {
+      padding: 1rem;
+    }
   }
   
   .col-left {
@@ -115,6 +124,10 @@
     flex-direction: column;
     gap: 1.5rem;
     max-width: 26.93rem;
+
+    @media screen and (max-width: 650px) {
+      max-width: 100%;
+    }
   }
   
   .col-right {
@@ -125,6 +138,15 @@
     font-size: $fontSizeLargest;
     font-weight: bold;
     line-height: $lineHeight;
+    transition: all .5s $easeOutExpo;
+
+    @media screen and (max-width: 650px) {
+      font-size: $fontSizeLarge;
+    }
+
+    @media screen and (max-width: 450px) {
+      font-size: $fontSizeBig;
+    }
   }
 
   &__sub-title {
