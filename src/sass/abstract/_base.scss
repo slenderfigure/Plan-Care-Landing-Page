@@ -7,7 +7,7 @@ body {
   color: $darkGreen;
   font-family: $fontFamily;
   font-size: $fontSizeMedium;
-  background-color: rgba($yellow, .1);
+  background-color: $lightYellow;
   box-sizing: border-box;
 
   ::selection {

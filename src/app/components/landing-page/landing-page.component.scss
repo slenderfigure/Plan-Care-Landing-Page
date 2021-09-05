@@ -170,7 +170,8 @@
     background-color: rgba($white, .4);
     backdrop-filter: blur(1px);
     border-radius: 50%;
-    transform: scale(2) rotate(15deg);
+    transform: scale(2);
+    transition: all .5s $easeOutExpo;
     z-index: 1;
 
     &::after {
@@ -180,6 +181,11 @@
       height: .6rem;
       background-color: $white;
       border-radius: 50%;
+      transition: all .5s $easeOutExpo;
+    }
+
+    &:hover::after {
+      transform: scale(1.2);
     }
   }
 
@@ -194,6 +200,7 @@
     text-overflow: ellipsis;
     background-color: $white;
     border-radius: 4rem;
+    box-shadow: 0 2rem 3rem rgba($darkGreen, .2);
     transform: rotate(15deg);
     transition: all .5s $easeOutExpo;
     overflow: hidden;
@@ -221,7 +228,7 @@
 
     .label {
       left: 2rem;
-      top: 1rem;
+      top: 1rem;      
     }
   }
 

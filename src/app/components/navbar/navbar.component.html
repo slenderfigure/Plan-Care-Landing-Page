@@ -11,7 +11,8 @@
       </div>
   
       <div class="col-right">
-        <ul class="header__link-list">
+        <ul class="header__link-list" 
+          role="Navigation link list">
           <li *ngFor="let link of navLinks" 
             class="header__list-item">
             <a [routerLink]="[link.url]" class="header__link">
@@ -21,21 +22,31 @@
         </ul>
     
         <button type="button" 
+          aria-label="Search Button"
+          role="Search Button"
           class="header__search-btn circle-button">
           <img src="assets/images/search.svg" 
             class="icon"
             alt="Search Icon"
             draggable="false">
         </button>
-    
+
         <button type="button" 
-          class="header__profile-btn circle-button circle-button-filled">
+          class="header__profile-btn circle-button circle-button-filled"
+          aria-label="Login Button"
+          role="Login Button">
           <img src="assets/images/user.svg" 
             class="icon"
             alt="User Icon"
             draggable="false">
         </button>
       </div>
+
+      <button type="button"
+        aria-label="Menu Button"
+        role="Open menu" 
+        class="header__menu-btn">
+      </button>
     </div>
   </nav>
 </header>

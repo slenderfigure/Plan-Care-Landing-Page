@@ -18,6 +18,10 @@
     display: flex;
     gap: 1.6rem;
     align-items: center;
+
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
   }
 
   &__logo {
@@ -30,6 +34,8 @@
   &__link-list {
     display: flex;
     gap: 1.6rem;
+
+   
   }
 
   &__link {
@@ -67,6 +73,35 @@
   &__profile-btn {
     
     .icon {
+      width: .75rem;
+    }
+  }
+
+  &__menu-btn {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: .2rem;
+    display: none;
+
+    @media screen and (max-width: 700px) {
+      display: flex;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      height: 2px;
+      background-color: $darkGreen;
+      border-radius: 2px;
+    }
+
+    &::before {
+      width: 1.2rem;
+    }
+
+    &::after {
       width: .75rem;
     }
   }
