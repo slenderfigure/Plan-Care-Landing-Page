@@ -1,1 +1,28 @@
-<p>mobile-menu works!</p>
+<aside role="Sidemenu" class="sidemenu">
+  <div class="sidemenu__header">
+    <figure class="sidemenu__avatar">
+      <img src="assets/images/avatar.jpg" 
+        alt="User avatar" 
+        draggable="false"
+        class="icon">
+    </figure>
+    <span class="sidemenu__username">
+      Marie Roux
+    </span>
+  </div>
+
+  <ul class="sidemenu__link-list">
+    <li *ngFor="let link of navLinks; let i=index;"
+      class="sidemenu__list-item">
+      <a [href]="link.url" 
+        class="sidemenu__link"
+        [class.active]="i == 0">
+        <img src="assets/images/sprout.svg" 
+          alt="Icon" 
+          class="icon"
+          draggable="false">
+        <span>{{ link.text }}</span>
+      </a>
+    </li>
+  </ul>
+</aside>

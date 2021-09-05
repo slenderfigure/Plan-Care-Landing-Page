@@ -1,0 +1,92 @@
+@import '/src/sass/abstract/variables';
+@import '/src/sass/abstract/animations';
+
+.sidemenu {
+  display: flex;
+  flex-direction: column;
+  width: 15.8rem;
+  min-height: 100vh;
+  padding: 4rem 1.5rem;
+  user-select: none;
+
+  &__header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding-bottom: 3rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+  }
+
+  .sidemenu__avatar {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120%;
+      height: 120%;
+      transform: translate(-50%, -50%);
+      border: 1px solid rgba($green, .4);
+      background-color: rgba($green, .05);
+      border-radius: 50%;
+    }
+
+    .icon {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      border-radius: 50%;
+      z-index: 1;
+    }
+  }
+  
+  &__link-list {
+    display: grid;
+    gap: .5rem;
+    width: 100%;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: .8rem 1.5rem;
+    font-weight: 700;
+    border-radius: 1.5rem;
+    transition: all .5s $easeOutExpo;
+    user-select: none;
+
+    .icon {
+      width: .8rem;
+      height: .8rem;
+    }
+
+    &.active {      
+      background-color: rgba($green, .1);      
+    }
+
+    &:hover {
+      background-color: rgba($green, .1);
+    }
+  }
+}

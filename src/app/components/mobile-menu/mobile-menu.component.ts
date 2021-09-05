@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavLink, NAV_LINKS } from '../navbar/config/nav-links.config';
 
 @Component({
   selector: 'app-mobile-menu',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mobile-menu.component.scss']
 })
 export class MobileMenuComponent implements OnInit {
+  navLinks: NavLink[] = NAV_LINKS;
 
   constructor() { }
 
