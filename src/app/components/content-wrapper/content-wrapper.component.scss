@@ -18,7 +18,7 @@
     width: 12rem;
     height: 12rem;
     animation: waveLeaf 5s linear infinite alternate;
-    background: url('../../../assets/images/small-leaf-2.png') no-repeat;
+    background: url('/assets/images/small-leaf-2.png') no-repeat;
     background-size: contain;
   }
 
@@ -29,7 +29,7 @@
     height: 14rem;
     transform-origin: bottom;
     animation: waveLeaf2 5s linear infinite alternate;
-    background: url('../../../assets/images/small-leaf.png') no-repeat;
+    background: url('/assets/images/small-leaf.png') no-repeat;
     background-size: contain;
   }
 }
