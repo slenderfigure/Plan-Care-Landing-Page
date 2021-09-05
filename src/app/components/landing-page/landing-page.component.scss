@@ -144,3 +144,111 @@
     }
   }
 }
+
+// Dashed bent line effect
+.leaf-part-indicator {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  // background-color: rgba($darkGreen, .1);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border: 1px dashed rgba($darkGreen, .4);
+  }
+
+  .dot {
+    position: absolute;
+    left: -.6rem;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: rgba($white, .3);
+    backdrop-filter: blur(2px);
+    border-radius: 50%;
+    transform: scale(2) rotate(15deg);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: .6rem;
+      height: .6rem;
+      background-color: $white;
+      border-radius: 50%;
+    }
+  }
+
+  .label {
+    position: absolute;
+    width: 5rem;
+    padding: .8rem 1.2rem;
+    color: $darkGreen;
+    text-align: center;
+    font-weight: 800;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: $white;
+    border-radius: 4rem;
+    transform: rotate(15deg);
+    transition: all .5s $easeOutExpo;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+  }
+
+  &:nth-of-type(1) {
+    top: -1rem;
+    left: 1.6rem;
+
+    &::before {
+      bottom: 0;
+      left: 0;
+      height: 50%;
+    }
+  
+    &::after {
+      top: -5px;
+      left: 0;
+      height: 50%;
+      transform: rotate(45deg);
+      transform-origin: bottom;
+    }
+
+    .label {
+      left: 2rem;
+      top: 1rem;
+    }
+  }
+
+  &:nth-of-type(2) {
+    top: 4%;
+    right: 22%;
+    transform: rotate(15deg);
+
+    &::before {
+      bottom: 0;
+      left: 0;
+      height: 38%;
+    }
+  
+    &::after {
+      top: 1.7rem;
+      left: 0;
+      height: 45%;
+      transform: rotate(60deg);
+      transform-origin: bottom;
+    }
+
+    .label {
+      left: 3rem;
+      top: 3rem;
+      transform: rotate(0);
+    }
+  }
+}
