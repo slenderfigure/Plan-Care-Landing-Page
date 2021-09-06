@@ -4,10 +4,19 @@
 .cover {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   padding-top: 12.25rem;
   background-color: $lightYellow;
+  transition: all .5s $easeOutExpo;
   overflow: hidden;
+
+  @media screen and (max-width: 650px) {
+    padding-top: 8rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding-top: 6rem;
+  }
 
   &__background {
     position: absolute;
@@ -57,6 +66,11 @@
       width: 20rem;
       height: 20rem;
       border-radius: 50%;
+
+      @media screen and (max-width: 650px) {
+        width: 15rem;
+        height: 15rem;
+      }
       
       &:nth-child(odd) {
         background-color: $green;
@@ -111,11 +125,13 @@
     z-index: 1;
 
     @media screen and (max-width: 650px) {
+      grid-template-columns: 3fr 1fr;
       padding: 1.5rem 2.5rem;
     }
-
-    @media screen and (max-width: 450px) {
-      padding: 1rem;
+    
+    @media screen and (max-width: 500px) {
+      grid-template-columns: auto;
+      padding: 1.5rem;
     }
   }
   
@@ -164,12 +180,27 @@
     display: grid;
     grid-template-columns: min-content min-content;
     gap: 1rem;
+
+    @media screen and (max-width: 450px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cover__link {
+      
+      @media screen and (max-width: 450px) {
+        width: 100%;
+      }
+    }
   }
 
   &__disclaimer {
     color: $royalBlue;
     font-size: $fontSizeSmallest;
     font-weight: 600;
+
+    @media screen and (max-width: 450px) {
+      text-align: center;;
+    }
   }
 
   &__hero {
@@ -178,7 +209,19 @@
     width: 45rem;
     height: 45rem;
     transform: rotate(-15deg);
+    transition: all .5s $easeOutExpo;
     user-select: none;
+    z-index: -1;
+
+    @media screen and (max-width: 900px) {
+      width: 150%;
+      height: 150%;
+      transform: rotate(-15deg) translateY(-3rem);
+    }
+
+    @media screen and (max-width: 650px) {
+      display: none;
+    }
 
     &::after {
       content: '';
@@ -202,10 +245,22 @@
   &__footer {
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     width: 100%;
     padding: 12rem 0 2rem;
+    transition: all .5s $easeOutExpo;
+
+    @media screen and (max-width: 650px) {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 8rem 0 2rem;
+    }
+
+    @media screen and (max-width: 400px) {
+      grid-template-columns: auto;
+      justify-items: center;
+      gap: 2rem;
+    }
   }
 
   &__sn-link-list {
@@ -230,7 +285,25 @@
     position: relative;
     justify-self: center;
     border-radius: 50%;
+    transition: all .5s $easeOutExpo;
     user-select: none;
+
+    @media screen and (max-width: 650px) {
+      justify-self: end;
+    }
+    
+    @media screen and (max-width: 500px) {
+      transform: scale(.9);
+    }
+
+    @media screen and (max-width: 450px) {
+      transform: scale(.8);
+    }
+
+    @media screen and (max-width: 400px) {
+      transform: scale(.7);
+      justify-self: center;
+    }
 
     &::after {
       content: '';
@@ -273,7 +346,13 @@
   position: absolute;
   width: 200px;
   height: 200px;
+  transition: all .5s $easeOutExpo;
   z-index: 3;
+
+  @media screen and (max-width: 950px) {
+    visibility: hidden;
+    opacity: 0;
+  }
 
   &::before,
   &::after {
