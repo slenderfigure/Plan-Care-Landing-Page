@@ -34,7 +34,13 @@
 
     <div class="col-right">
       <figure class="cover__hero">
-        <img [src]="heroImage" 
+        <img [srcset]="heroImageSrcset"
+          sizes="(max-width: 570px) 300px,
+                 (max-width: 670px) 400px,
+                 (max-width: 770px) 500px,
+                 (max-width: 900px) 600px,
+                 720"  
+          [src]="heroImage[720]" 
           alt="Hero Image" 
           draggable="false"
           class="cover__hero-image">
@@ -44,7 +50,6 @@
           class="leaf-part-indicator">
           <span class="label">{{ part.label }}</span>
           <button type="button" 
-            role="Leaf Part Viewer"
             aria-label="View Leaf Part"
             class="dot"></button>
         </div>

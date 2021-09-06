@@ -11,7 +11,13 @@ export class LandingPageComponent implements OnInit {
   landingTitle: string = 'Plants make a positive impact on your environment.';
   landingSubTitle: string = 'Provide your house & office space with the right plants and let our Plant Care Team keep them flourishing.';
   disclaimer: string = 'You will get a 30-days free trial!';
-  heroImage: string = 'assets/images/leaf.png';
+  heroImage: { [key: number]: string } = {
+    720: 'assets/images/hero-leaf_720x.png',
+    600: 'assets/images/hero-leaf_600x.png',
+    500: 'assets/images/hero-leaf_500x.png',
+    400: 'assets/images/hero-leaf_400x.png',
+    300: 'assets/images/hero-leaf_300x.png',
+  };
   footerLinks: SocialNetworkLink[] = FOOTER_SN_LINKS;
   logoLetters = [ 
     'S', 'C', 'R', 'O', 'L', 'L', '',
@@ -21,6 +27,12 @@ export class LandingPageComponent implements OnInit {
   ];
   leafParts: LeafPartIndicator[] = LEAF_PARTS;
 
+  get heroImageSrcset(): string {
+    return Object.keys(this.heroImage).map((key: any) => {
+      return `${this.heroImage[key]} ${key}w`;
+    }).join(', ');
+  }
+
   topStyle(index: number, deg = 250, gap = 20): { [key:string]: string | number } {
     const rotate = deg + (index + 1) * gap;
     return { transform: `rotate(${rotate}deg)` };
@@ -29,7 +41,7 @@ export class LandingPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+    console.log(this.heroImageSrcset);
   }
 
 }

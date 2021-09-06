@@ -12,7 +12,7 @@
   
       <div class="col-right">
         <ul class="header__link-list" 
-          role="Navigation link list">
+          role="navigation">
           <li *ngFor="let link of navLinks" 
             class="header__list-item">
             <a [routerLink]="[link.url]" class="header__link">
@@ -23,7 +23,6 @@
     
         <button type="button" 
           aria-label="Search Button"
-          role="Search Button"
           class="header__search-btn circle-button">
           <img src="assets/images/search.svg" 
             class="icon"
@@ -33,8 +32,7 @@
 
         <button type="button" 
           class="header__profile-btn circle-button circle-button-filled"
-          aria-label="Login Button"
-          role="Login Button">
+          aria-label="Login Button">
           <img src="assets/images/user.svg" 
             class="icon"
             alt="User Icon"
@@ -45,7 +43,6 @@
       <button (click)="onMenuBtnClick($event)" 
         type="button"
         aria-label="Menu Button"
-        role="Open menu" 
         class="header__menu-btn">
       </button>
     </div>
