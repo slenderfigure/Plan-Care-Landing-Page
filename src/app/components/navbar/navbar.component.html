@@ -11,9 +11,8 @@
       </div>
   
       <div class="col-right">
-        <ul class="header__link-list" 
-          role="navigation">
-          <li *ngFor="let link of navLinks" 
+        <ul class="header__link-list" role="menu">
+          <li role="menuitem" *ngFor="let link of navLinks" 
             class="header__list-item">
             <a [routerLink]="[link.url]" class="header__link">
               {{ link.text }}
@@ -42,7 +41,7 @@
 
       <button (click)="onMenuBtnClick($event)" 
         type="button"
-        aria-label="Menu Button"
+        aria-label="Navigation Menu"
         class="header__menu-btn">
       </button>
     </div>

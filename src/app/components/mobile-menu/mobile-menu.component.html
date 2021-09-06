@@ -1,4 +1,4 @@
-<aside role="menu" class="sidemenu">
+<aside class="sidemenu">
   <div class="sidemenu__header">
     <figure class="sidemenu__avatar">
       <img src="assets/images/avatar.jpg" 
@@ -11,8 +11,9 @@
     </span>
   </div>
 
-  <ul class="sidemenu__link-list">
+  <ul class="sidemenu__link-list" role="menu">
     <li *ngFor="let link of navLinks; let i=index;"
+      role="menuitem"
       class="sidemenu__list-item">
       <a [href]="link.url" 
         class="sidemenu__link"

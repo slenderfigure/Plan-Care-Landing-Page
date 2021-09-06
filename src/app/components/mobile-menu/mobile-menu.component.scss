@@ -73,7 +73,7 @@
     padding: .8rem 1.5rem;
     font-weight: 700;
     border-radius: 1.5rem;
-    transition: all .5s $easeOutExpo;
+    transition: background-color .5s $easeOutExpo;
     user-select: none;
 
     .icon {
@@ -85,8 +85,10 @@
       background-color: rgba($green, .1);      
     }
 
-    &:hover {
-      background-color: rgba($green, .1);
+    @media screen and (min-width: 650px) {
+      &:active {
+        background-color: rgba($green, .1);
+      }
     }
   }
 }

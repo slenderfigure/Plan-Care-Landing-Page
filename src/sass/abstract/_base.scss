@@ -9,6 +9,8 @@ body {
   font-size: $fontSizeMedium;
   background-color: $lightYellow;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   ::selection {
     color: #fff;
@@ -23,9 +25,9 @@ body {
   font-weight: inherit;
   box-sizing: inherit;
 
-  -o-transition-property: none !important;
-  -moz-transition-property: none !important;
-  -ms-transition-property: none !important;
-  -webkit-transition-property: none !important;
-  transition-property: none !important;
+  // -o-transition-property: none !important;
+  // -moz-transition-property: none !important;
+  // -ms-transition-property: none !important;
+  // -webkit-transition-property: none !important;
+  // transition-property: none !important;
 }
