@@ -8,16 +8,16 @@
     transform: rotate(235deg) 
                translateY(-4rem);
     filter: blur(1px) 
-          brightness(80%)
-          drop-shadow($dropshadow rgba($darkGreen, .5));
+            brightness(80%)
+            drop-shadow($dropshadow rgba($darkGreen, .5));
   }
   to {
     transform: rotate(280deg) 
                translateY(-4rem)
                scale(.8);
     filter: blur(5px) 
-          brightness(80%)
-          drop-shadow($dropshadow rgba($darkGreen, .5));
+            brightness(80%)
+            drop-shadow($dropshadow rgba($darkGreen, .5));
   }
 }
 
@@ -27,16 +27,16 @@
                scaleX(-1)                
                translateY(4.5rem);
     filter: blur(1px) 
-          brightness(80%)
-          drop-shadow($dropshadow rgba($darkGreen, .5));
+            brightness(80%)
+            drop-shadow($dropshadow rgba($darkGreen, .5));
   }
   to {
     transform: rotate(40deg) 
                scaleX(-1) 
                translateY(4.5rem);
     filter: blur(5px) 
-          brightness(80%)
-          drop-shadow($dropshadow rgba($darkGreen, .5));
+            brightness(80%)
+            drop-shadow($dropshadow rgba($darkGreen, .5));
   }
 }
 
