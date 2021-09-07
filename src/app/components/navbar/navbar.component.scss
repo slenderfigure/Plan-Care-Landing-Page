@@ -15,7 +15,7 @@
     width: 100%;
     padding: 2rem 3rem;
     grid-template-columns: auto max-content;
-
+    
     @media screen and (max-width: 650px) {
       padding: 1.5rem 2.5rem;
     }
@@ -37,6 +37,8 @@
 
   &__logo {
     display: block;
+    width: 2.2rem;
+    height: 2.2rem;
     transition: transform .5s $easeOutExpo;
     user-select: none;
 
@@ -46,11 +48,6 @@
 
     @media screen and (max-width: 450px) {
       transform: scale(.8);
-    }
-
-    .icon {
-      width: 2.2rem;
-      height: 2.2rem;
     }
   }
 
@@ -102,14 +99,14 @@
   }
 
   &__menu-btn {
-    display: none;
     position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     gap: .2rem;
+    display: none;
 
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 700px) {
       display: flex;
     }
 

@@ -40,8 +40,8 @@
                 brightness(80%)
                 drop-shadow($dropshadow rgba($darkGreen, .5));
         
+        animation: waveLeaf 5s linear infinite alternate;
         @media screen and (min-width: 800px) {
-          animation: waveLeaf 5s linear infinite alternate;
         }
       }
     
@@ -60,8 +60,8 @@
                 brightness(80%)
                 drop-shadow($dropshadow rgba($darkGreen, .5));
 
+        animation: waveLeaf2 5s linear infinite alternate;
         @media screen and (min-width: 800px) {
-          animation: waveLeaf2 5s linear infinite alternate;
         }
       }
     }
@@ -74,11 +74,7 @@
       align-items: center;
       justify-items: center;
       height: inherit;
-
       backface-visibility: hidden;
-      // perspective: 1000;
-      // transform: translate3d(0,0,0);
-      // transform: translateZ(0);
       filter: blur(100px);
     }
 
