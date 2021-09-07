@@ -41,27 +41,15 @@
 }
 
 @keyframes grow {
-  to {
-    transform: scale(1.6);
-  }
+  to { ransform: scale(1.6); }
 }
 
 @keyframes growFromLeft {
-  from {
-    transform: translateX(-50%) 
-               scale(.6);
-  }
-  to {
-    transform: translateX(0) scale(1.6);
-  }
+  from { transform: translateX(-50%) scale(.6); }
+  to { transform: translateX(0) scale(1.6); }
 }
 
 @keyframes growFromRight {
-  from {
-    transform: translateX(50%) 
-               scale(.6);
-  }
-  to {
-    transform: translateX(0) scale(1.6);
-  }
+  from { transform: translateX(50%) scale(.6); }
+  to { transform: translateX(0) scale(1.6); }
 }
