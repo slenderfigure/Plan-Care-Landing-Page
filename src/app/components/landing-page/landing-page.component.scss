@@ -34,15 +34,8 @@
         height: 12rem;
         background: url('/assets/images/small-leaf-2.png') no-repeat;
         background-size: contain;
-        transform: rotate(235deg) 
-               translateY(-4rem);
-        filter: blur(1px) 
-                brightness(80%)
-                drop-shadow($dropshadow rgba($darkGreen, .5));
-        
+        backface-visibility: hidden;
         animation: waveLeaf 5s linear infinite alternate;
-        @media screen and (min-width: 800px) {
-        }
       }
     
       &:nth-child(2) {
@@ -52,17 +45,9 @@
         height: 14rem;
         background: url('/assets/images/small-leaf.png') no-repeat;
         background-size: contain;
+        backface-visibility: hidden;
         transform-origin: bottom;
-        transform: rotate(20deg) 
-               scaleX(-1)                
-               translateY(4.5rem);
-        filter: blur(1px) 
-                brightness(80%)
-                drop-shadow($dropshadow rgba($darkGreen, .5));
-
         animation: waveLeaf2 5s linear infinite alternate;
-        @media screen and (min-width: 800px) {
-        }
       }
     }
 
@@ -309,26 +294,13 @@
     justify-self: center;
     border-radius: 50%;
     transition: transform .5s $easeOutExpo;
+    backface-visibility: hidden;
     user-select: none;
 
     @media screen and (max-width: 650px) {
-      // justify-self: end;
       display: none;
     }
     
-    // @media screen and (max-width: 500px) {
-    //   transform: scale(.9);
-    // }
-
-    // @media screen and (max-width: 450px) {
-    //   transform: scale(.8);
-    // }
-
-    // @media screen and (max-width: 400px) {
-    //   transform: scale(.7);
-    //   justify-self: center;
-    // }
-
     &::after {
       content: '';
       position: absolute;
