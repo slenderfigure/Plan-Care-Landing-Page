@@ -24,6 +24,7 @@ body {
   font-size: inherit;
   font-weight: inherit;
   box-sizing: inherit;
+  backface-visibility: hidden;
 
   // -o-transition-property: none !important;
   // -moz-transition-property: none !important;
